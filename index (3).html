@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume - Jane Doe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-dark: #2C3E50;
+            --accent-blue: #3498DB;
+            --bg-light: #ECF0F1;
+            --text-dark: #2C3E50;
+            --text-light: #ECF0F1;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: var(--primary-dark);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-light) !important;
+        }
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--text-light) !important;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-blue) !important;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            padding: 8rem 0 5rem;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            text-align: center;
+        }
+        .hero-profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-blue);
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            color: var(--text-light);
+        }
+        .hero p.lead {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .hero-social-icons a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .hero-social-icons a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* --- Content Sections --- */
+        .section-padding {
+            padding: 5rem 0;
+        }
+        .section-heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            border-bottom: 3px solid var(--accent-blue);
+            padding-bottom: 10px;
+            margin-bottom: 3rem;
+        }
+        .content-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+        .content-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+        .content-card h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        .content-card p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+        .content-card ul {
+            padding-left: 20px;
+        }
+        .content-card ul li {
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+        
+        /* --- Testimonials Section --- */
+        #testimonials {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 5rem 0;
+        }
+        .testimonial-heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .testimonial-card {
+            background-color: var(--primary-dark);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jane Doe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#work-history">Work History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <img src="https://via.placeholder.com/150x150/2C3E50/ECF0F1?text=Jane+D" class="hero-profile-img" alt="Profile Picture">
+            <h1>Jane Doe</h1>
+            <p class="lead">Project Management Professional & Business Consultant with 10+ years of experience.</p>
+            <div class="hero-social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work-history" class="section-padding container">
+        <h2 class="section-heading">Work History</h2>
+        <div class="content-card">
+            <h4>Senior Project Manager</h4>
+            <h5>TechCorp Solutions | 2018 - Present</h5>
+            <ul>
+                <li>Managed a portfolio of 5+ large-scale projects, consistently delivering on time and under budget.</li>
+                <li>Led a team of 15 engineers, fostering a collaborative and high-performance environment.</li>
+                <li>Implemented Agile methodologies, improving team productivity by 30%.</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Project Coordinator</h4>
+            <h5>Innovate, Inc. | 2015 - 2018</h5>
+            <ul>
+                <li>Coordinated project schedules, resources, and budgets for multiple client accounts.</li>
+                <li>Assisted in the development and execution of project plans.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="section-padding container">
+        <h2 class="section-heading">Education</h2>
+        <div class="content-card">
+            <h4>Master of Business Administration (MBA)</h4>
+            <h5>University of Business | 2013 - 2015</h5>
+        </div>
+        <div class="content-card">
+            <h4>Bachelor of Science in Computer Science</h4>
+            <h5>State University | 2009 - 2013</h5>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="testimonial-heading">Client Testimonials</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/150x150/2C3E50/ECF0F1?text=Client+1" class="testimonial-avatar" alt="Client 1">
+                        <p class="testimonial-text">"Jane is a true professional. Her attention to detail and ability to manage complex projects is second to none. We were impressed with her leadership from day one."</p>
+                        <p class="testimonial-author">- John Smith, CEO of Global Solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/150x150/2C3E50/ECF0F1?text=Client+2" class="testimonial-avatar" alt="Client 2">
+                        <p class="testimonial-text">"Working with Jane was a seamless experience. She kept our project on track and communicated clearly every step of the way. I highly recommend her services."</p>
+                        <p class="testimonial-author">- Emily Chen, Project Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
